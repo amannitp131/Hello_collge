@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="icon" href="favicon.ico">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>Hello College</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+	
+	  
+</head>
+<body style="background: rgb(220, 205, 220);">
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<div class="logo"><img src="grouplogo.svg" alt="logo"></div>
+			<ul>
+				<li><a class="active" href=""><span style="font-size:20px">Home</span></a></li>
+				<li><a href="#portfolio_section"><span style="font-size:20px">Real Time Data</span></a></li>
+				<li><a href="#team_section"><span style="font-size:20px">Team</span></a></li>
+				<li><a href="#services_section"><span style="font-size:20px">Services</span></a></li>
+				<li><a href="#feedback"><span style="font-size:20px">Contact</span></a></li>
+			</ul>
+
+			<!-- <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="images/icon/search.png" alt="search" onclick=slide()></div> -->
+			<a class="get-started" href="./login.html">Log-In</a>
+			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+
+<div class="container-fluid row d-flex">
+	<div class="head-container">
+		<div class="col-sm"><div class="quote-container">
+			<div class="container">
+				<!-- <h3>Today's Quote</h3> -->
+				<div id="quote" class="quote" style="width:50vw; height:auto;line-height:2em;">loading.....</div>
+				<button id="getbtn" class="btn" style="display: none;">Get Another Quote</button>
+			  </div>
+		  
+			
+		</div>
+	</div>
+<div class="col-sm">
+	<div class="svg-image">
+		<img src="images/extra/svg1.jpg" alt="svg">
+	</div>
+</div>
+	
+		
+	</div>
+</div>
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			<div class="user">
+				<!-- <img src="images/creator/roshan.jpeg" alt="Username"> -->
+				<p>Hello College</p>
+			</div>
+			<ul>
+				<li><a href="#about_section">About</a></li>
+				<li><a href="#portfolio_section">Portfolio</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+			</ul>
+		</div>
+	</header>
+<!-- ABOUT -->
+	<div class="diffSection" id="about_section">
+		<center><p style="font-size: 50px; padding: 100px">About</p></center>
+		<div class="about-content">
+				<div class="side-image">
+					<img class="sideImage" id="newimg" src="images/new new image.jpg">
+				</div>
+				<div class="side-text">
+					<h2>What you think about us ?</h2>
+					<p>An educational website serves as a digital platform dedicated to providing valuable learning resources, materials, and tools for students, educators, and lifelong learners. These websites offer a wide array of educational content covering various subjects: 
+                    Our Web-App will provide an interface for the Clubs to sell their merchandize.
+                    Hostellers can address their issues regarding mess food and Hostel
+					Our Web-app will provide them all the required platform to study the different topics and will provide them resources for   different examinations and will organize  coding Contest every week and will give them rating accordingly and arrange their ranks.</p>
+					</p>
+				</div>
+		</div>
+	</div>
+
+
+<!-- PORTFOLIO -->
+	<div class="diffSection" id="portfolio_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p></center>
+		<div class="content">
+			<p>
+				“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”
+			</p>
+		</div>
+	</div>
+	<div class="extra">
+		<p>We're expanding everyday</p>
+		<div class="smbox">
+		<span><center><div class="data datauser">00</div><div class="det">Registered Students</div></center></span>
+		<span><center><div class="data">20</div><div class="det">Total Resources</div></center></span>
+		<span><center><div class="data">05</div><div class="det">Total Domains</div></center></span>
+		<span><center><div class="data dataissues" >00</div><div class="det">Registered Issues</div></center></span>
+		</div>
+	</div>
+
+
+<!-- TEAM -->
+<div class="diffSection" id="team_section">
+	<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p></center>
+	<div class="totalcard">
+		<div class="card">
+			<center><img src="aashish.jpg"></center>
+			<center><div class="card-title">Aashish Singh</div>
+			<div id="detail">
+				<p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives “</p>
+				<div class="duty"></div>
+				<a href="" target="_blank"><button class="btn-ashish">Follow +</button></a>
+			</div>
+			</center>
+		</div>
+		<div class="card">
+			<center><img src="shivam.jpg"></center>
+			<center><div class="card-title">Shivam Saxena</div>
+			<div id="detail">
+				<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
+				<div class="duty"></div>
+				<a href="https://www.linkedin.com/in/shivam-saxena-aa8754289" target="_blank"><button class="btn-shivam">Follow +</button></a>
+			</div>
+			</center>
+		</div>
+		<div class="card">
+			<center><img src="akash.jpg"></center>
+			<center><div class="card-title">Akash Chandra</div>
+			<div id="detail">
+				<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
+				<div class="duty"></div>
+				<a href="" target="_blank"><button class="btn-akash">Follow +</button></a>
+			</div>
+			</center>
+		</div>
+		<div class="card">
+			<center><img src="aman.jpg"></center>
+			<center><div class="card-title">Aman Mishra</div>
+			<div id="detail">
+				<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
+				<div class="duty"></div>
+				<a href="https://www.linkedin.com/in/aman-mishra-837b9a27b" target="_blank"><button class="btn-aman">Follow +</button></a>
+			</div>
+			</center>
+		</div>
+	</div>
+</div>
+	
+
+
+<!-- SERVICES -->
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+		</div>
+		<a href="./computer_courses.html"><div class="s-card"><i class="fa-solid fa-laptop-code fa-5x " style="background:radial-gradient(blue,dodgerblue,blue);border-radius:30%"></i><p>Competative coding</p></div></a>
+		<a href="./update.html"><div class="s-card"><i class="fa-solid fa-bell fa-4x"   style="background:linear-gradient(55deg,yellow,orange,yellow);border-radius:30% 30% 30% 0%"></i><p>Updates</p></div></a>
+		<a href="./resource.html"><div class="s-card"><i class="fa-solid fa-layer-group fa-4x"  style="background:linear-gradient(75deg,gray,yellow,gray);border-radius:30%"></i><p>Resources</p></div></a>
+		<a href="./merchandise.html"><div class="s-card"><i class="fa-solid fa-cart-shopping fa-4x"  style="background:linear-gradient(45deg,orange,#F8F6E3,silver);border-radius:30%"></i><p>merchandise</p></div></a>
+		<a href="./chat.html"><div class="s-card"><i class="fa-solid fa-earth-americas fa-5x" style="background:linear-gradient(45deg,gray,#4CCD99,gray);border-radius:50%" ></i><p>Community</p></div></a>
+		<a href="./Issue.html"><div class="s-card"><i class="fa-regular fa-circle-check fa-5x" style="background:linear-gradient(45deg,#496989,silver,#496989);border-radius:50%"></i><p>Issues</p></div></a>
+		<a href="./photo-gallery.html"><div class="s-card"><i class="fa-solid fa-camera fa-4x" style="background:linear-gradient(45deg,gold,silver,gold);border-radius:40%"></i><p>Gallery</p></div></a>
+		<a href="./faq.html"><div class="s-card"><i class="fa-solid fa-circle-info fa-4x"  style="background:linear-gradient(20deg,silver,#124076,gold,purple);border-radius:60%"></i><p>FAQ</p></div></a>
+	</div>
+
+<!-- Reviews by Students -->
+<div id="makeitfull">
+	<a href="#review_section"><img src="images/icon/makeitfull.png"></a>
+</div>
+<div class="review">
+	<div class="diffSection" id="review_section">
+		<center><p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What the Students Say About Us?</p></center>
+	</div>
+	<div class="rev-container">
+		<div class="rev-card">
+			<div class="identity">
+				<p>Ritesh Raj</p>
+				<h6>NITP,CSE</h6>
+				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					This website is very useful for college students.Here we can easily report any complaints regarding our courses and mess food.
+				</p>
+			</div>m
+		</div>
+		<div class="rev-card">
+			<div class="identity">
+				<p>Ritik Kumar</p>
+				<h6>NITP,ELECTRICAL</h6>
+				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					I Want to learn competative programming from beginning. but it is very difficult for begineers to find out correct resource .this website is awesome as the resource provided in it is really mind blowing.
+				</p>
+			</div>
+		</div>
+		<div class="rev-card">
+			<div class="identity">
+				<p>Sanjeet kumar</p>
+				<h6>CSE</h6>
+				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					I want to give coding contest.But it is very difficult to find out the timing of contest of different platforms.this website provides the timing of contest and the resource regarding it .this website is completely awesome.
+				</p>
+			</div>
+		</div>
+		<div class="rev-card">
+			<div class="identity">
+				<p>Divyansh Kumar</p>
+				<h6>NITP,MECHANICAL</h6>
+				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+			</div>
+			<div class="rev-cont">
+				<p id="title">Review:</p>
+				<p id="content">
+					i am very interseted in learning python.but i cant find any perfect resource. this website provides awesome lectures of python and beginner to advance level question for practice.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="title2" id="feedBack">
+		<span>Contact Us</span>
+		<div class="shortdesc2">
+			
+		</div>
+	</div>
+
+	<div class="feedbox">
+		<div class="feed">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>Your Name</label><br>
+				<input type="text" name="" class="fname" required="required"><br>
+				<label>Email</label><br>
+				<input type="email" name="mail" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+		</div>
+	</div>
+
+	<marquee style="background: linear-gradient(to right, #ebd1ec, #eac8e6); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today."                 ;
+
+	</div></marquee>
+
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<img src="favicon.ico" style="width: 200px;">
+				<div class="logo"></div>
+				<div class="social-media">
+					<a href="#"><img src="images/icon\fb.png"></a>
+					<a href="#"><img src="images/icon\insta.png"></a>
+					<a href="#"><img src="images/icon\tt.png"></a>
+					<a href="#"><img src="images/icon\ytube.png"></a>
+					<a href="#"><img src="images/icon\linkedin.png"></a>
+				</div><br><br>
+				<p class="rights-text">Copyright © 2024 Created By Team Unity Squad. All Rights Reserved.</p>
+				<br><p><img src="images/icon/location.png"> NATIONAL INSTITUTE OF TECHNOLOGY<br>Patna,Bihar-800001</p><br>
+				<p><img src="images/icon/phone.png"> +918294252271<br><img src="images/icon/mail.png">&nbsp; hell0college143@gmail.com</p>
+			</div>
+			<div class="right-col">
+				<h1 style="color: #fff">Our Newsletter</h1>
+				<div class="border"></div><br>
+				<p>Enter Your Email to get our News and updates.</p>
+				<form class="newsletter-form">
+					<input class="txtb" type="email" placeholder="Enter Your Email">
+					<input class="btn" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</footer>
+	 <script>
+    
+const btn = document.getElementById("getbtn");
+
+const QuoteElem = document.getElementById("quote");
+
+const fetchData = async () => {
+  QuoteElem.innerHTML = `<p>Loading...</p>`;
+  let data = await fetch("https://api.quotable.io/random");
+
+  let json = await data.json();
+  QuoteElem.innerHTML = `<p>${json.content}</p>`;
+};
+btn.addEventListener("click", fetchData);
+fetchData();
+    </script>
+	<script>
+		function userandissuecount(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.open('POST', '/realtimechange', true);
+			xhttp.setRequestHeader('Content-Type', 'application/JSON');
+			xhttp.onreadystatechange = function(){
+				if(this.status == 200 && this.readyState == 4){
+					var response = JSON.parse(this.responseText);
+					document.getElementsByClassName('datauser')[0].innerHTML = response.usercount;
+					document.getElementsByClassName('dataissues')[0].innerHTML = response.communitycount;
+				}
+			};
+			xhttp.send();
+		}
+		setInterval(userandissuecount, 2000);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTP Verification</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("images/extra/backwallpaper.jpg");
+        background-size: cover;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .container {
+        max-width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: rgb(65, 62, 62);
+    }
+    .otp-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .otp-input {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .message {
+        margin-top: 20px;
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Verification</h2>
+        <p>Please enter the 6-digit OTP sent to your mobile number.</p>
+        <form id="otpForm" action="/verify" method="post">
+            <div class="otp-container">
+                <input type="text"name="first" class="otp-input" id="otpInput1" maxlength="1" oninput="moveToNext(this)">
+                <input type="text" name="second" class="otp-input" id="otpInput2" maxlength="1" oninput="moveToNext(this)">
+                <input type="text" name="third" class="otp-input" id="otpInput3" maxlength="1" oninput="moveToNext(this)">
+                <input type="text" name="fourth" class="otp-input" id="otpInput4" maxlength="1" oninput="moveToNext(this)">
+                <input type="text" name="fifth" class="otp-input" id="otpInput5" maxlength="1" oninput="moveToNext(this)">
+                <input type="text" name="sixth" class="otp-input" id="otpInput6" maxlength="1" oninput="moveToNext(this)">
+                <input type="submit" value="Verify Otp" class="button">
+            </div>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+<script>
+    function moveToNext(input) {
+        var maxLength = parseInt(input.getAttribute("maxlength"));
+        var currentLength = input.value.length;
+
+        if (currentLength >= maxLength) {
+            var next = input.nextElementSibling;
+            if (next && next.tagName.toLowerCase() === "input") {
+                next.focus();
+            }
+        }
+    }
+</script>
+</body>
+</html>

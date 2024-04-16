@@ -1,0 +1,313 @@
+@import url("https://use.typekit.net/pzy4qea.css");
+:root {
+  --black: #030a21;
+  --white: #fff;
+  --red: #d93030;
+  --grey: #f0f0f0;
+  --darkGrey: #535353;
+  --lightGrey: #bfbfbf;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "ibm-plex-sans", sans-serif;
+}
+.navbar {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 30px 0px;
+  height: 72px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  z-index: 1000000;
+  top: 0px;
+  left: 0px;
+}
+.navBox {
+  /* background-color: green; */
+  width: 1280px;
+  max-width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 96px;
+  margin-left: 8px;
+}
+.navLogin {
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.navLogin button:last-child {
+  color: var(--black);
+  font-size: 16px;
+  padding: 10px 24px;
+  font-weight: 500;
+  border: 1px solid var(--black);
+  border-radius: 50px;
+  background-color: var(--white);
+  transition: all 0.4s;
+}
+.navLogin button:last-child:hover {
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+  transition: all 0.4s;
+}
+.navLogin button:first-child {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  margin: 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.navLogin button:first-child:hover {
+  cursor: pointer;
+}
+.navs {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.navItem {
+  margin: 0 12px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.navItem i {
+  margin-left: 6px;
+}
+.navItem:hover {
+  cursor: pointer;
+}
+.dropBox {
+  position: absolute;
+  top: 72px;
+  left: 0px;
+  display: none;
+  width: 432px;
+}
+
+.navItem:hover .dropBox {
+  display: block;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.showBox {
+  width: 432px;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px 0px;
+}
+
+.dropInBox {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.dropInBox:hover {
+  background-color: var(--grey);
+}
+.dropInBox p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+.dropInBox span {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.dropInBox button {
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 2px 6px;
+  border-radius: 50px;
+  border: 1px solid var(--black);
+  margin: 0 16px;
+  background-color: var(--white);
+}
+.dropInBox button i {
+  color: var(--red);
+  margin-left: 0px;
+  font-size: 8px;
+}
+.viewAll {
+  color: var(--black);
+  font-size: 14px;
+  padding: 6px 24px;
+  font-weight: 500;
+  border: 1px solid var(--black);
+  border-radius: 50px;
+  margin: 16px 0 16px 16px;
+  background-color: var(--white);
+  transition: all 0.4s;
+}
+.viewAll:hover {
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+  transition: all 0.4s;
+}
+.viewAll1 {
+  color: var(--white);
+  font-size: 14px;
+  padding: 6px 24px;
+  font-weight: 500;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  margin: 16px 0 16px 16px;
+  background-color: var(--black);
+  transition: all 0.4s;
+}
+.viewAll1:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+  transition: all 0.4s;
+}
+
+/* For the more button */
+.dropBox1 {
+  position: absolute;
+  top: 72px;
+  left: -20px;
+  display: none;
+  width: calc(100% + 40px);
+}
+.navItem:hover .dropBox1 {
+  display: block;
+  box-sizing: border-box;
+  padding: 16px 0;
+}
+.showBox1 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px;
+  overflow: hidden;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px 0px;
+}
+.dropInBox1 {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+.dropInBox1:hover {
+  background-color: var(--grey);
+}
+.navMenu {
+  display: none;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+}
+.rightNav {
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .navs,
+  .navLogin {
+    display: none;
+  }
+  .navMenu {
+    display: flex;
+  }
+  .navMenu:hover {
+    cursor: pointer;
+  }
+  .activeNav {
+    background-color: var(--grey);
+  }
+  .rightNav {
+    width: 280px;
+    background-color: var(--white);
+    overflow-y: auto;
+    height: calc(100vh - 72px);
+    position: absolute;
+    right: 0px;
+    top: 72px;
+  }
+  /* width */
+  .rightNav::-webkit-scrollbar {
+    width: 0px;
+  }
+  .navSmall {
+    box-sizing: border-box;
+    padding: 16px;
+  }
+  .navSmall a {
+    display: block;
+    color: var(--black);
+    text-decoration: none;
+    margin: 24px 0;
+  }
+  .button1 {
+    font-size: 16px;
+    width: 100%;
+    margin: 16px 0 0 0;
+    box-sizing: border-box;
+    padding: 16px 0;
+    border: 1px solid var(--black);
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 500px;
+    transition: all 0.4s;
+  }
+  .button1:hover {
+    background-color: var(--darkGrey);
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  .button2 {
+    font-size: 16px;
+    width: 100%;
+    margin: 16px 0;
+    box-sizing: border-box;
+    padding: 16px 0;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 500px;
+    transition: all 0.4s;
+  }
+  .button2:hover {
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  .showNav {
+    display: block;
+    z-index: 1000;
+    animation: floatIn 0.4s 0s forwards;
+  }
+  @keyframes floatIn {
+    0% {
+      right: -280px;
+    }
+    100% {
+      right: 0px;
+    }
+  }
+}

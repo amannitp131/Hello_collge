@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<title>Login SignUp</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- It will redirect to the Home Page after submitting the form -->
+  <script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+    //   alert("Great Job !");
+    });
+  });
+  </script>
+</head>
+<body>
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+				<img src="images/icon/fb2.png">
+				<img src="images/icon/insta2.png">
+				<img src="images/icon/tt2.png">
+			</div>
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" method="post" action="/fromdatabaseVerification">
+				<div class="inp">
+					<img src="images/icon/user.png"><input type="text" id="email" name="username" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/icon/password.png"><input type="password" id="password" name="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+
+
+			<div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect"">
+					<img src="images/icon/google.png"><span>Sign in with Google</span>
+				</button>
+			</div>
+			
+			<!-- Registration Form -->
+			<form id="register" action="/register" method="post" class="input-group">
+				<input type="text" class="input-field" placeholder="Username"id="username" name="username" required="required">
+				<br>
+				<span id="usernameError" style="color:red"></span><br>
+				<input type="email" class="input-field" placeholder="Email Address" name="email" required="required">
+				<input type="text" class="input-field" placeholder="Full-Name" name="fullname" required="required" placeholder="Name">
+				<input type="password" class="input-field" placeholder="Create Password" name="password" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="cpassword" required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js">
+		</script>
+		<script>
+   // Function to send AJAX request to check username availability
+function checkUsernameAvailability() {
+    const username = document.getElementById('username').value;
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/checkUsername', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                if (!response.available) {
+                    document.getElementById('usernameError').textContent = 'Username not available';
+                } else {
+                    document.getElementById('usernameError').textContent = 'Username is Available';
+                }
+            } else {
+                console.error('Error:', xhr.status);
+                // Handle server errors or network issues
+                document.getElementById('usernameError').textContent = 'Error checking username';
+            }
+        }
+    };
+    xhr.send(JSON.stringify({ username: username }));
+}
+
+// Attach event listener to the username input field
+document.getElementById('username').addEventListener('input', function() {
+    checkUsernameAvailability();
+});
+		</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello College- Merchandise</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+ 
+</head>
+
+<body style="background: linear-gradient(rgb(108, 47, 98),rgb(98, 37, 84));">
+
+
+  <div class="overlay" data-overlay></div>
+
+  
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="./assets/images/imagefromt.jpeg" alt="subscribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe Newsletter</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>Hello College</b> to get latest products and discount update.
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+<div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="./assets/images/imagefromt.jpeg" alt="merchandises" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Hackslash merchandise
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p>
+
+    </div>
+
+  </div>
+
+  <header style="background: rgb(166, 70, 158);">
+ <div class="header-main">
+
+      <div class="container">
+
+        
+
+        <div class="header-search-container">
+
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="header-user-actions">
+
+          <button class="action-btn" >
+            <ion-icon name="person-outline" style="background: rgb(201, 94, 199);"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"  style="background: rgb(201, 94, 199);"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"  style="background: rgb(201, 94, 199);"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <nav class="desktop-navigation-menu">
+
+      <div style="color: beige;" class="container">
+
+        <ul style="background-color: aliceblue;" class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Home</a>
+          </li>
+
+          
+          <li class="menu-category">
+            <a href="#" class="menu-title">Club's Merchandises</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">Tesla</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">IEEE</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Hackslash</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">GDSC</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Expresso</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Sankalp</a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">GYB</a>
+              </li>
+</ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">College merchandises</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="#">T shirt</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Hoodie</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Caps</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Trouser</a>
+              </li>
+
+            </ul>
+          </li>
+
+          
+          </li>
+ </nav>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Men's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Shorts & Jeans</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Safety Shoes</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Wallet</a>
+            </li>
+
+          </ul>
+
+        </li>
+<ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Clothes Perfume</a>
+            </li>
+
+
+        <ul class="menu-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+ <main>
+
+    <div class="banner">
+
+      <div class="container">
+
+          <div style="height: 290%;" class="slider-item">
+
+            <img  src="./assets/images/imagefromt.jpeg" alt="banner" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle" style="color: black;"></p>
+
+             
+
+              <a  href="show.html" class="banner-btn" style="color: black;">Shop now</a>
+
+            </div>
+ </div>
+
+      </div>
+
+    </div>
+<div class="category">
+
+      <div class="container">
+
+        <div class="category-item-container has-scrollbar">
+
+          <div class="category-item">
+
+            <div  style="background-color: black;"  class="category-img-box">
+              <img src="https://tesla-nitp.vercel.app/images/logo.svg" alt="dress & frock" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Tesla</h3>
+
+                <p class="category-item-amount">(4)</p>
+              </div>
+
+              <a href="show.html" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div style="background-color: black;" class="category-img-box">
+              <img src="https://hackslash.co.in/_ipx/w_96,q_75/%2F_next%2Fstatic%2Fmedia%2Fhackslash_logo.bc4b31f6.svg?url=%2F_next%2Fstatic%2Fmedia%2Fhackslash_logo.bc4b31f6.svg&w=96&q=75" alt="winter wear" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Hackslash</h3>
+
+                <p class="category-item-amount">(4)</p>
+              </div>
+
+              <a href="show.html" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div style="background-color: white;" class="category-img-box">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjEuMDMgNTguNTciPgoJPGc+CgkJPHBhdGggY2xhc3M9ImNscy0xIgoJCQlkPSJNNDguNDcgNDAuNTIgMTQuNTEgMjAuOTFhOS42MyA5LjYzIDAgMCAwLTQuODMtMS4zIDkuNjcgOS42NyAwIDAgMC04LjM4IDQuODRDLTEuMzcgMjkuMDguMjEgMzQuOTkgNC44NCAzNy42NkwzOC44IDU3LjI3YTkuNjMgOS42MyAwIDAgMCA0LjgzIDEuM2MzLjM0IDAgNi41OS0xLjczIDguMzgtNC44NCAyLjY3LTQuNjMgMS4wOS0xMC41NC0zLjU0LTEzLjIxWk0xMTYuMiAyMC45MSA4Mi4yNCAxLjNBOS42MyA5LjYzIDAgMCAwIDc3LjQxIDBjLTMuMzQgMC02LjU5IDEuNzMtOC4zOCA0Ljg0LTIuNjcgNC42Mi0xLjA5IDEwLjU0IDMuNTQgMTMuMjFsMzMuOTYgMTkuNjFhOS42MyA5LjYzIDAgMCAwIDQuODMgMS4zYzMuMzQgMCA2LjU5LTEuNzMgOC4zOC00Ljg0IDIuNjctNC42MyAxLjA4LTEwLjU0LTMuNTQtMTMuMjFaTTEwNS4xOCAzOS45OWwtMTUuODUtOS4xNS0xNi43NyA5LjY4Yy00LjYzIDIuNjctNi4yMSA4LjU4LTMuNTQgMTMuMjFhOS42NTYgOS42NTYgMCAwIDAgMTMuMjEgMy41NGwyNy4zLTE1Ljc2Yy0xLjUyLS4yMy0zLS43NC00LjM1LTEuNTJaTTE1Ljg2IDE4LjU4bDE1Ljg1IDkuMTUgMTYuNzctOS42OGM0LjYzLTIuNjcgNi4yMS04LjU4IDMuNTQtMTMuMjFDNDkuMzUuMjIgNDMuNDQtMS4zNyAzOC44MSAxLjNsLTI3LjMgMTUuNzZjMS41Mi4yMyAzIC43NCA0LjM1IDEuNTJaIiAvPgoJPC9nPgo8L3N2Zz4K" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Gdsc </h3>
+
+                <p class="category-item-amount">(4)</p>
+              </div>
+
+              <a href="show.html" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div  class="category-img-box">
+              <img src="https://ugc.production.linktr.ee/1215936d-bd30-4ff4-b8b1-d4deac539d55_image.jpeg?io=true&size=avatar-v3_0" alt="shorts & jeans" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Desco</h3>
+
+                <p class="category-item-amount">(4)</p>
+              </div>
+
+              <a href="show.html" class="category-btn">Show all</a>
+
+            </div>
+          </div>
+ </div>
+      </div>
+    </div>
+  <script>
+
+const modal = document.querySelector('[data-modal]');
+const modalCloseBtn = document.querySelector('[data-modal-close]');
+const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
+
+const modalCloseFunc = function () { modal.classList.add('closed') }
+
+modalCloseOverlay.addEventListener('click', modalCloseFunc);
+modalCloseBtn.addEventListener('click', modalCloseFunc);
+
+const notificationToast = document.querySelector('[data-toast]');
+const toastCloseBtn = document.querySelector('[data-toast-close]');
+
+
+toastCloseBtn.addEventListener('click', function () {
+  notificationToast.classList.add('closed');
+});
+
+const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
+const mobileMenu = document.querySelectorAll('[data-mobile-menu]');
+const mobileMenuCloseBtn = document.querySelectorAll('[data-mobile-menu-close-btn]');
+const overlay = document.querySelector('[data-overlay]');
+
+for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
+
+  const mobileMenuCloseFunc = function () {
+    mobileMenu[i].classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  mobileMenuOpenBtn[i].addEventListener('click', function () {
+    mobileMenu[i].classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  mobileMenuCloseBtn[i].addEventListener('click', mobileMenuCloseFunc);
+  overlay.addEventListener('click', mobileMenuCloseFunc);
+
+}
+const accordionBtn = document.querySelectorAll('[data-accordion-btn]');
+const accordion = document.querySelectorAll('[data-accordion]');
+
+for (let i = 0; i < accordionBtn.length; i++) {
+
+  accordionBtn[i].addEventListener('click', function () {
+
+    const clickedBtn = this.nextElementSibling.classList.contains('active');
+
+    for (let i = 0; i < accordion.length; i++) {
+
+      if (clickedBtn) break;
+
+      if (accordion[i].classList.contains('active')) {
+
+        accordion[i].classList.remove('active');
+        accordionBtn[i].classList.remove('active');
+
+      }
+
+    }
+
+    this.nextElementSibling.classList.toggle('active');
+    this.classList.toggle('active');
+
+  });
+
+}
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
+

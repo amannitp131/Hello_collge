@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        @media screen and (max-width: 780px) {
+            .navbar-collapse {
+                padding-top: 15px; /* Add padding to the navbar collapse */
+            }
+            .navbar-nav {
+                float: none !important; /* Reset float */
+                margin-top: 0; /* Reset margin */
+            }
+            .navbar-toggle {
+                margin: 0; /* Reset margin */
+            }
+        }
+        body{
+            overflow: hidden;
+        }
+        .form {
+            position: fixed;
+            bottom: 1vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .userMessageSpace {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 15vh);
+            position: relative;
+            margin-top: 50px; /* Adjust margin top */
+            width:100%;
+        }
+        .message {
+                width:99%; 
+                min-height: 10vh;
+                /* height:auto; */
+                max-height:20vh;
+                text-align: center;
+                font-size: 18px;
+                position: relative; 
+                border:1px solid #ccc;
+                padding-right:10vw;
+                border-radius:20px;
+            }
+        .submit {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background: linear-gradient(45deg, orange, brown);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+        .messages {
+            position: fixed;
+            top: 50px;
+            left: 25vw;
+            width: 75vw;
+            height: 75vh;
+            overflow-y: auto;
+            border-left: 1px solid #ccc; /* Add border */
+            padding-left: 20px; /* Add padding */
+        }
+        .leftside {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 25vw;
+            height: calc(100vh - 50px);
+            overflow-y: auto;
+            border-right: 3px solid black;
+            height:75vh;
+        }
+        .innerformmsg{
+            width:98%;
+            text-align:center;
+            font-size:16px;
+            border:20px;
+            margin-bottom:3px;
+        }
+        .innerform .submit1{
+            float:right !important;
+            text-align:center;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="font-size: 20px;" href="/index.html">Hello College</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav navbar-right" style="font-size: 20px;">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Group</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="leftside">
+<form class="innerform">
+    <hr>
+    <input type="text"  name="chatgroup" class="innerformmsg" placeholder="Create Your Group">
+    <button type="submit" class="submit1" name="submit">Create a Group</button><hr>
+
+</form>
+        </div>
+        <div class="messages"></div>
+        <div class="userMessageSpace">
+            <form id="messageForm" class="form">
+                <textarea id="message" name="messageinput" id="message1" class="message" placeholder="Type Your message"></textarea>
+                <button type="submit" class="submit"><i class="fa fa-bullhorn"></i>Submit</button>
+            </form>
+        </div>
+        <div class="messages"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function getCookie(username) {
+        var name = username + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieArray = decodedCookie.split(';');
+        for(var i = 0; i < cookieArray.length; i++) {
+            var cookie = cookieArray[i];
+            while (cookie.charAt(0) == ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(name) == 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+        return "";
+    }
+
+    var username = getCookie('username'); // Assuming cookie name is 'username'!!
+    if (!username) {
+        alert('Please log in to continue!');
+        alert('Redirecting to the Home Page!');
+        window.location.href = './login.html'; 
+    }
+    var groupname=document.getElementById('message1'),innerHTML;
+    document.getElementById('submit1').addEventListener('click',createdgroup(groupname));
+    function creategroup(groupname){
+var xhttp=XMLHttpRequest();
+xhttp.open('POST','/creatinggroup',true);
+xhttp.setRequestHeader('Content-Type','application/JSON');
+var data={
+    username:username,
+    groupname:groupname
+};
+xhttp.onreadystatechange=function(){
+    if(this.readyState==4){
+        var response=JSON.parse(this.responseText());
+        if(response.created=='yes'){
+            alert("Group has been Created!");
+        }
+        else if(response.exist==yes){
+            alert("Group already exists!");
+            alert("Please create with a different name!");
+        }
+        else{
+            alert("Some error occured while creatin a group!");
+        }
+    }
+    xhttp.send(data);
+}
+    }
+        function getgroupinfoonload(username){
+var xhttp=XMLHttpRequest();
+xhttp.open('POST','/sendgroupchat',true);
+xhttp.setRequestHeader('Content-Type','application/JSON');
+data={
+    username:username
+};
+xhttp.send(JSON.stringify(data));
+xhttp.onreadystatechange=function(){
+    if(this.readyState==4&&this.status==200){
+        var response = JSON.parse(this.responseText);
+        if(response.data==='nomessage'){
+            alert('No Group has been created!');
+            return;
+        }
+        for(var i=response.length-1;i>=0;i--){
+                    var messageDiv = document.createElement('div');
+                    messageDiv.textContent = response.group;
+                    messageDiv.className = 'messagediv';
+                    var groupDiv = document.createElement('div');
+                    groupDiv.className = 'group';
+                    // var likeButton = document.createElement('button');
+                    var messagesContainer = document.querySelector('.messages');
+            messagesContainer.insertBefore(messageDiv, messagesContainer.firstChild);
+        }
+    }
+}
+        }
+        document.addEventListener('DOMContentLoaded',getgroupinfoonload(username));
+        document.addEventListener('DOMContentLoaded', function(){
+    var messagesContainer = document.querySelector('.messages');
+    messagesContainer.addEventListener('click', function(event) {
+    var messageDiv = event.target.closest('.messagediv');
+    var xhttp = new XMLHttpRequest();
+xhttp.open('POST', '/showmessage', true);
+xhttp.setRequestHeader('Content-Type', 'application/json');
+var data = {
+    username: username,
+    message: message 
+};
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var response = JSON.parse(this.responseText);
+        if(response.data==='nomessage'){
+            alert('currently no message is post!');
+            return;
+        }
+        for(var i=response.length-1;i>=0;i--){
+                    var messageDiv = document.createElement('div');
+                    messageDiv.textContent = response.group;
+                    messageDiv.className = 'messagediv';
+                    var groupDiv = document.createElement('div');
+                    groupDiv.className = 'group';
+                    var messagesContainer = document.querySelector('.messages');
+            messagesContainer.insertBefore(messageDiv, messagesContainer.firstChild);
+        }
+    }
+}
+    });
+});
+
+    </script>
+</body>
+</html>

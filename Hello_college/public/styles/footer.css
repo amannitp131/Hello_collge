@@ -1,0 +1,223 @@
+.footer {
+  width: 100%;
+  background-color: var(--black);
+  box-sizing: border-box;
+  padding: 32px 0;
+}
+.footerBox {
+  width: 1320px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: auto;
+}
+.footerBox h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 36px;
+}
+.imgsBox {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigImages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.bigImages div {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+  align-items: center;
+  border-right: 1px solid var(--darkGrey);
+}
+.bigImages div img {
+  width: 70%;
+}
+.inverstors {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 48px;
+  height: 320px;
+}
+.inverstors p {
+  text-align: center;
+  color: var(--white);
+}
+.overlapImages {
+  margin: 16px 0;
+  width: 320px;
+  height: 56px;
+  position: relative;
+}
+.overlapImages img {
+  position: absolute;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--white);
+  border-radius: 50px;
+}
+.overlapImages img:nth-child(1) {
+  left: 0px;
+}
+.overlapImages img:nth-child(2) {
+  left: 38px;
+}
+.overlapImages img:nth-child(3) {
+  left: 76px;
+}
+.overlapImages img:nth-child(4) {
+  left: 114px;
+}
+.overlapImages img:nth-child(5) {
+  left: 152px;
+}
+.overlapImages img:nth-child(6) {
+  left: 190px;
+}
+.overlapImages img:nth-child(7) {
+  left: 228px;
+}
+.overlapImages img:nth-child(8) {
+  left: 266px;
+}
+.footer2 {
+  width: 1320px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+.contact {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+}
+.contact h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--white);
+}
+.logo2 {
+  width: 120px;
+  margin: 16px 0;
+}
+.contact p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--white);
+  margin: 16px 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 16px 0 0;
+}
+.contact p a {
+  color: var(--green);
+  margin-left: 12px;
+  text-decoration: none;
+}
+.emailBox {
+  width: 480px;
+  height: 56px;
+  background-color: var(--white);
+  max-width: 100%;
+  border-radius: 60px;
+  position: relative;
+  margin: 48px 0;
+}
+.emailBox input {
+  position: absolute;
+  width: 424px;
+  height: 56px;
+  border: none;
+  border-radius: 56px;
+  max-width: calc(100% - 56px);
+  box-sizing: border-box;
+  padding: 0 24px;
+}
+.emailBox input:focus {
+  outline: none;
+}
+.emailBox button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 56px;
+  border: none;
+  border: 1px solid var(--white);
+  background-color: var(--black);
+  color: var(--white);
+}
+.emailBox button:hover {
+  cursor: pointer;
+  background-color: var(--grey);
+  color: var(--black);
+}
+.contactIcons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 36px;
+  width: 300px;
+  max-width: 100%;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.infoBox {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+.eachInfo {
+  height: 250px;
+}
+.eachInfo h2 {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+.infoBox a {
+  display: block;
+  color: var(--lightGrey);
+  text-decoration: none;
+  margin: 16px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .imgsBox {
+    flex-direction: column;
+  }
+  .bigImages div {
+    height: auto;
+    margin: 32px 0;
+  }
+  .inverstors {
+    padding: 12px;
+  }
+  .footer2 {
+    flex-direction: column;
+  }
+}
